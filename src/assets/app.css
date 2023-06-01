@@ -12,7 +12,7 @@
   }
   
   .sidebar {
-    width: 15%;
+    width: 13%;
     height: 100vh - 2rem;
     background-color: #2b2b2b;
     display: flex;
@@ -48,7 +48,7 @@
   }
   
   .router-view-container {
-    width: 85%;
+    width: 87%;
     padding: 2rem;
   }
   

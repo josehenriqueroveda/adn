@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 class="h1-bolder">Clientes</h1>
     <div class="search-container">
       <input class="search-input" type="text" v-model="searchQuery" placeholder="Buscar clientes...">
       <router-link class="btn-common" :to="{ name: 'NewCustomerForm' }">Adicionar Cliente</router-link>

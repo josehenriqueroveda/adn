@@ -25,17 +25,33 @@ a,
   transition: 0.4s;
 }
 
+.h1-bolder {
+  font-weight: 700;
+}
+
 input {
-  width: 30%;
+  min-width: 40%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 20px;
 }
 
+textarea {
+  min-width: 40%;
+  min-height: 10rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+
 .btn-common {
   background-color: hsla(204, 100%, 50%, 1);
   color: white;
+  margin-right: 2rem;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -96,6 +112,26 @@ input {
   justify-content: left;
 }
 
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
 
 @media (hover: hover) {
   a:hover {
@@ -117,28 +153,38 @@ input {
 }
 
 @media (max-width: 768px) {
+
   /* Apply styles to the table when the screen width is less than or equal to 768px */
   table {
     width: 100%;
     border-collapse: collapse;
   }
-  
-  th, td {
+
+  th,
+  td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
   }
-  
+
   th {
     background-color: #f2f2f2;
   }
-  
+
   .acoes {
     display: flex;
     flex-direction: row;
   }
-  
+
   .btn-table {
     margin: 4px;
+  }
+
+  input {
+    min-width: 100%;
+  }
+
+  textarea {
+    min-width: 100%;
   }
 }
