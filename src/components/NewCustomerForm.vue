@@ -18,6 +18,44 @@
       <label for="notes">Observações:</label>
       <textarea id="notes" v-model="notes" placeholder=""></textarea>
       <br />
+      <h2>Pets</h2>
+      <button class="btn-table" type="button" @click="addPet">+ Cadastrar Pet</button>
+      <table class="table-common">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Raça</th>
+            <th>Peso</th>
+            <th>Idade</th>
+            <th>Observações</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(pet, index) in pets" :key="pet.id">
+            <td>{{ pet.name }}</td>
+            <td>{{ pet.breed }}</td>
+            <td>{{ pet.weight }}</td>
+            <td>{{ pet.age }}</td>
+            <td>{{ pet.notes }}</td>
+            <td>
+              <button class="btn-table" type="button" @click="editPet(index)">Edit</button>
+              <button class="btn-table" type="button" @click="deletePet(index)">Delete</button>
+            </td>
+          </tr>
+          <tr v-if="showAddPetForm">
+            <td><input v-model="petName" placeholder="Name"></td>
+            <td><input v-model="petBreed" placeholder="Breed"></td>
+            <td><input v-model="petWeight" placeholder="Weight"></td>
+            <td><input v-model="petAge" placeholder="Age"></td>
+            <td><input v-model="petNotes" placeholder="Notes"></td>
+            <td>
+              <button class="btn-table" type="button" @click="savePet">Save</button>
+              <button class="btn-table" type="button" @click="cancelAddPet">Cancel</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <button class="btn-common" type="submit">Salvar</button>
       <router-link :to="{ name: 'CustomerPage' }">Cancelar</router-link>
     </form>
@@ -42,19 +80,98 @@ export default {
       state: '',
       active: true,
       notes: '',
-      pets: [],
       states: UFS,
+      pets: [],
+      editingPetIndex: null,
+      petName: '',
+      petBreed: '',
+      petWeight: '',
+      petAge: '',
+      petNotes: '',
+      showAddPetForm: false
     }
   },
   methods: {
     createCustomer() {
       const newCustomer = {
         name: this.name,
-        email: this.email
+        email: this.email,
+        phone: this.phone,
+        address: this.address,
+        city: this.city,
+        state: this.state,
+        active: this.active,
+        notes: this.notes,
+        pets: this.pets
       }
       this.$emit('submit', newCustomer)
       this.name = ''
       this.email = ''
+      this.phone = ''
+      this.address = ''
+      this.city = ''
+      this.state = ''
+      this.active = true
+      this.notes = ''
+      this.pets = []
+    },
+    addPet() {
+      this.showAddPetForm = true
+      this.editingPetIndex = null
+      this.petName = ''
+      this.petBreed = ''
+      this.petWeight = ''
+      this.petAge = ''
+      this.petNotes = ''
+    },
+    savePet() {
+      if (this.editingPetIndex !== null) {
+        this.pets.splice(this.editingPetIndex, 1, {
+          name: this.petName,
+          breed: this.petBreed,
+          weight: this.petWeight,
+          age: this.petAge,
+          notes: this.petNotes
+        })
+      } else {
+        this.pets.push({
+          id: this.pets.length + 1,
+          name: this.petName,
+          breed: this.petBreed,
+          weight: this.petWeight,
+          age: this.petAge,
+          notes: this.petNotes
+        })
+      }
+      this.showAddPetForm = false
+      this.editingPetIndex = null
+      this.petName = ''
+      this.petBreed = ''
+      this.petWeight = ''
+      this.petAge = ''
+      this.petNotes = ''
+    },
+    cancelAddPet() {
+      this.showAddPetForm = false
+      this.editingPetIndex = null
+      this.petName = ''
+      this.petBreed = ''
+      this.petWeight = ''
+      this.petAge = ''
+      this.petNotes = ''
+    },
+    editPet(index) {
+      const pet = this.pets[index]
+      this.showAddPetForm = false
+      this.editingPetIndex = index
+      this.petName = pet.name
+      this.petBreed = pet.breed
+      this.petWeight = pet.weight
+      this.petAge = pet.age
+      this.petNotes = pet.notes
+    },
+    deletePet(index) {
+      this.pets.splice(index, 1)
     },
   }
 }
