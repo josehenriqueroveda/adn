@@ -5,8 +5,8 @@ export const CUSTOMERS = [
         email: 'johndoe@example.com',
         phone: '1234567890',
         address: '123 Main St, City, State 12345',
-        city: 'City',
-        state: 'State',
+        city: 'Fortaleza',
+        state: 'Ceará',
         active: true,
         notes: 'This is a note about John Doe',
         pets: [
@@ -34,8 +34,8 @@ export const CUSTOMERS = [
         email: 'janesmith@example.com',
         phone: '0987654321',
         address: '321 Main St, City, State 12345',
-        city: 'City',
-        state: 'State',
+        city: 'Curitiba',
+        state: 'Paraná',
         active: false,
         notes: 'This is a note about Jane Smith',
         pets: [
@@ -55,8 +55,8 @@ export const CUSTOMERS = [
         email: 'bobjohnson@example.com',
         phone: '1234509876',
         address: '555 Main St, City, State 12345',
-        city: 'City',
-        state: 'State',
+        city: 'Belo Horizonte',
+        state: 'Minas Gerais',
         active: true,
         notes: 'This is a note about Bob Johnson',
         pets: [

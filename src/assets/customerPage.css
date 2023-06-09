@@ -11,9 +11,77 @@
   width: 40%;
 }
 
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.margin-top {
+  margin-top: 2rem;
+}
+
+.div-customer-page {
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+
+.customer-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.customer-active {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.checkbox-input {
+  min-width: 2rem;
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.customer-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.customer-details-label {
+  font-weight: 550;
+  margin-bottom: 0.5rem;
+}
+
+.customer-details {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.pet-details {
+  margin-bottom: 0.3rem;
+  font-size: 16px;
+  color: #555;
+}
+
+.pet-details-label {
+  font-weight: 550;
+}
+
+.pet-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
 @media (max-width: 768px) {
   .select-container {
     width: 100%;
   }
-} 
-
+}

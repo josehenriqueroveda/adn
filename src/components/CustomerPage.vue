@@ -59,14 +59,6 @@ export default {
       })
     }
   },
-  methods: {
-    navigateToEditCustomerPage(customer) {
-      // Code to navigate to the edit customer page
-    },
-    navigateToViewCustomerPage(customer) {
-      // Code to navigate to the view customer page
-    }
-  }
 }
 </script>
 

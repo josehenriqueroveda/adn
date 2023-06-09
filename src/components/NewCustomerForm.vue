@@ -20,7 +20,7 @@
       <br />
       <h2>Pets</h2>
       <button class="btn-table" type="button" @click="addPet">+ Cadastrar Pet</button>
-      <table class="table-common">
+      <table class="table-common margin-bottom">
         <thead>
           <tr>
             <th>Nome</th>
@@ -28,7 +28,7 @@
             <th>Peso</th>
             <th>Idade</th>
             <th>Observações</th>
-            <th></th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -38,20 +38,20 @@
             <td>{{ pet.weight }}</td>
             <td>{{ pet.age }}</td>
             <td>{{ pet.notes }}</td>
-            <td>
-              <button class="btn-table" type="button" @click="editPet(index)">Edit</button>
-              <button class="btn-table" type="button" @click="deletePet(index)">Delete</button>
+            <td class="acoes">
+              <button class="btn-table" type="button" @click="editPet(index)">Editar</button>
+              <button class="btn-table" type="button" @click="deletePet(index)">Remover</button>
             </td>
           </tr>
           <tr v-if="showAddPetForm">
-            <td><input v-model="petName" placeholder="Name"></td>
-            <td><input v-model="petBreed" placeholder="Breed"></td>
-            <td><input v-model="petWeight" placeholder="Weight"></td>
-            <td><input v-model="petAge" placeholder="Age"></td>
-            <td><input v-model="petNotes" placeholder="Notes"></td>
-            <td>
-              <button class="btn-table" type="button" @click="savePet">Save</button>
-              <button class="btn-table" type="button" @click="cancelAddPet">Cancel</button>
+            <td><input v-model="petName" placeholder="Nome"></td>
+            <td><input v-model="petBreed" placeholder="Raça"></td>
+            <td><input v-model="petWeight" placeholder="Peso"></td>
+            <td><input v-model="petAge" placeholder="Idade"></td>
+            <td><input v-model="petNotes" placeholder="Observações"></td>
+            <td class="acoes">
+              <button class="btn-table" type="button" @click="savePet">Salvar</button>
+              <button class="btn-table" type="button" @click="cancelAddPet">Cancelar</button>
             </td>
           </tr>
         </tbody>
