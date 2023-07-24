@@ -67,8 +67,8 @@
 
 
 <script>
-import { UFS } from '../config/constants'
-import { CUSTOMERS } from '../data/dummies.js'
+import { UFS } from '@/config/constants'
+import { CUSTOMERS } from '@/data/dummies.js'
 import VueMultiselect from 'vue-multiselect'
 
 export default {

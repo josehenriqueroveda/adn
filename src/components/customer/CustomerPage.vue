@@ -36,7 +36,7 @@
 </template>
   
 <script>
-import { CUSTOMERS } from '../data/dummies.js'
+import { CUSTOMERS } from '@/data/dummies.js'
 
 export default {
   props: {
@@ -63,5 +63,5 @@ export default {
 </script>
 
 <style>
-@import '../assets/customerPage.css';
+@import '@/assets/customerPage.css';
 </style>

@@ -8,12 +8,14 @@
         <RouterLink class="sidebar-link" to="/clientes">Clientes</RouterLink>
         <RouterLink class="sidebar-link" to="/atendimentos">Atendimentos</RouterLink>
         <RouterLink class="sidebar-link dropdown-link" to="/materiais">Materiais</RouterLink>
+        <RouterLink class="sidebar-link dropdown-link" to="/receituarios">Receiturários</RouterLink>
       </nav>
       <div class="dropdown-menu" v-if="isCollapsed">
         <RouterLink class="sidebar-link dropdown-link" to="/">Home</RouterLink>
         <RouterLink class="sidebar-link dropdown-link" to="/clientes">Clientes</RouterLink>
         <RouterLink class="sidebar-link dropdown-link" to="/atendimentos">Atendimentos</RouterLink>
         <RouterLink class="sidebar-link dropdown-link" to="/materiais">Materiais</RouterLink>
+        <RouterLink class="sidebar-link dropdown-link" to="/receituarios">Receiturários</RouterLink>
       </div>
     </div>
     <div class="router-view-container">

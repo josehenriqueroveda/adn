@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../components/HomePage.vue'
-import CustomerPage from '../components/CustomerPage.vue'
-import NewCustomerForm from '../components/NewCustomerForm.vue'
-import ViewCustomerPage from '../components/ViewCustomerPage.vue'
-import EditCustomerForm from '../components/EditCustomerForm.vue'
+import CustomerPage from '../components/customer/CustomerPage.vue'
+import NewCustomerForm from '../components/customer/NewCustomerForm.vue'
+import ViewCustomerPage from '../components/customer/ViewCustomerPage.vue'
+import EditCustomerForm from '../components/customer/EditCustomerForm.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),

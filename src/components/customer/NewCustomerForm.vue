@@ -63,7 +63,7 @@
 </template>
   
 <script>
-import { UFS } from '../config/constants.js'
+import { UFS } from '@/config/constants.js'
 import VueMultiselect from 'vue-multiselect'
 
 export default {
@@ -178,5 +178,5 @@ export default {
 </script>
 
 <style>
-@import '../assets/vueMultiselect.css';
+@import '@/assets/vueMultiselect.css';
 </style>

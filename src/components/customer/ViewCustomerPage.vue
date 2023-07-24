@@ -32,7 +32,7 @@
 </template>
   
 <script>
-import { CUSTOMERS } from '../data/dummies.js'
+import { CUSTOMERS } from '@/data/dummies.js'
 
 export default {
     data() {

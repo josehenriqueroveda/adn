@@ -79,3 +79,65 @@ export const CUSTOMERS = [
         ]
     }
 ]
+
+
+export const VETSERVICES = [
+    {
+        id: 1,
+        type: 'Consultation',
+        customer_id: 1,
+        pet_id: 1,
+        date: '2020-01-01',
+        time: '10:00',
+        notes: 'This is a note about the consultation',
+        anamnesis: {
+            weight: 15,
+            temperature: 38,
+            heart_rate: 'good',
+            respiratory_rate: 'good',
+            feces: 'good',
+            urine: 'good'
+        },
+        diagnosis: 'This is a diagnosis',
+        prescription_id: 1
+    },
+    {
+        id: 2,
+        type: 'Consultation',
+        customer_id: 1,
+        pet_id: 2,
+        date: '2020-01-01',
+        time: '11:00',
+        notes: 'This is a note about the consultation',
+        anamnesis: {
+            weight: 8,
+            temperature: 40,
+            heart_rate: 'good',
+            respiratory_rate: 'regular',
+            feces: 'good',
+            urine: 'dark'
+        },
+        diagnosis: 'This is a diagnosis',
+        prescription_id: 2
+    },
+    {
+        id: 3,
+        type: 'Vaccination',
+        customer_id: 3,
+        pet_id: 4,
+        date: '2020-01-01',
+        time: '12:00',
+        notes: 'This is a note about the vaccination',
+        anamnesis: {
+            weight: 15,
+            temperature: 38,
+            heart_rate: 'good',
+            respiratory_rate: 'good',
+            feces: 'good',
+            urine: 'good'
+        },
+        diagnosis: 'This is a diagnosis',
+        prescription_id: 3
+    },
+]
+
